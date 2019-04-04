@@ -1,3 +1,68 @@
 <resources>
-    <string name="app_name">Android_Tarea6</string>
+    <string name="app_name">ITESO store</string>
+    <string name="welcome_message">WELCOME TO ITESO PRODUCTS</string>
+    <string name="iteso_website">https://www.iteso.mx</string>
+
+    <string name="action_privacy_policy_string">Privacy Policy</string>
+    <string name="action_logout_string">Log Out</string>
+    <string name="action_login_string">LOGIN</string>
+
+    <string name="login_username_hint">Introduce your username</string>
+    <string name="login_password_hint">Introduce your password</string>
+
+    <string name="categoryTech">Technology</string>
+    <string name="categoryHome">Home</string>
+    <string name="categoryElectronics">Electronics</string>
+
+    <string name="activity_detail_title">Item Title</string>
+    <string name="activity_detail_store">Item Store</string>
+    <string name="activity_detail_phone">Item Phone</string>
+    <string name="activity_detail_location">Item Location</string>
+
+    <string name="bbStore">BestBuy</string>
+
+    <string name="macbookTitle">MacBook Pro 17</string>
+    <string name="macbookLocation">Zapopan, Jalisco</string>
+    <string name="macbookPhone">33 12345678</string>
+    <string name="macbookDescription">Llévate esta Mac con un 30% de descuento para que puedas programar para XCode y Android sin tener que batallar tanto como en tu Windows</string>
+    <string name="macbookCode">T-MAC.</string>
+
+    <string name="allienwareTitle">Allienware Nueva</string>
+    <string name="allienwareLocation">Zapopan, Jalisco</string>
+    <string name="allienwarePhone">33 1548700</string>
+    <string name="allienwareDescription">Llévate esta Computadora Gamer para ejecución de juegos de alta gama.</string>
+    <string name="allienwareCode">T-ALLIEN</string>
+
+    <string name="fridgeTitle">Refrigerador Mabe</string>
+    <string name="fridgeLocation">Zapopan, Jalisco</string>
+    <string name="fridgePhone">33 1548700</string>
+    <string name="fridgeDescription">Refrigerador de 18 pies.</string>
+    <string name="fridgeCode">H-Fridge</string>
+
+    <string name="microTitle">Microondas Beko</string>
+    <string name="microLocation">Guadalajara, Jalisco</string>
+    <string name="microPhone">33 000000</string>
+    <string name="microDescription">Nuevo microondas.</string>
+    <string name="microCode">E-Micro.</string>
+
+    <string name="catHome">Home</string>
+    <string name="catElectronics">Electronics</string>
+    <string name="catTech">Technology</string>
+
+
+    <string name="cancel_Button">Cancel</string>
+    <string name="save_Button">Save</string>
+    <string name="title_activity_product">Activity Product</string>
+
+    <string name="image">Select image</string>
+    <string name="product_title">Enter product title</string>
+    <string name="product_category">Select Category</string>
+    <string name="product_store">Select Store</string>
+    <string-array name="images">
+        <item>Allienware</item>
+        <item>Mac</item>
+        <item>Pillows</item>
+        <item>Refrigerator</item>
+        <item>Microwave</item>
+    </string-array>
 </resources>
