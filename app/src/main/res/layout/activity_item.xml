@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.iteso.tarea5.com.iteso.android_tarea6.ActivityItem">
+    <TextView
+        android:text="@string/image"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/spinner"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/text_Size"
+        />
+
+    <Spinner
+        android:id="@+id/images_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/spinner"
+        />
+    <TextView
+        android:text="@string/product_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/spinner"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/text_Size"
+        />
+    <EditText
+        android:id="@+id/title_product"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/spinner" />
+    <TextView
+        android:text="@string/product_store"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/spinner"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/text_Size"
+        />
+    <Spinner
+        android:id="@+id/stores_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/spinner"
+        />
+    <TextView
+        android:text="@string/product_category"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/spinner"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/text_Size"
+        />
+    <Spinner
+        android:id="@+id/categories_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/spinner"
+        />
+    <Button
+        android:id="@+id/Activity_item_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/save_Button"/>
+
+</LinearLayout>
