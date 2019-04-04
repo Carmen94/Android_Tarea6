@@ -8,9 +8,9 @@ import android.os.Bundle;
 import com.iteso.android_tarea6.beans.City;
 import com.iteso.android_tarea6.beans.Store;
 import com.iteso.android_tarea6.beans.User;
-import com.iteso.android_tarea6.beans.tools.Constants;
-import com.iteso.android_tarea6.beans.tools.ControlStore;
-import com.iteso.android_tarea6.beans.tools.DataBaseHandler;
+import com.iteso.android_tarea6.tools.Constants;
+import com.iteso.android_tarea6.tools.ControlStore;
+import com.iteso.android_tarea6.tools.DataBaseHandler;
 
 import java.util.ArrayList;
 import java.util.Timer;

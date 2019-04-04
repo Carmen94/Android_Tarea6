@@ -1,4 +1,4 @@
-package com.iteso.android_tarea6.beans.tools;
+package com.iteso.android_tarea6.tools;
 
 import android.content.ContentProvider;
 import android.content.ContentValues;
@@ -13,7 +13,7 @@ import java.util.HashMap;
 
 public class ContentProviderProducts extends ContentProvider {
     DataBaseHandler dataBaseHandler;
-    static final String PROVIDER_NAME = "com.iteso.android_tarea6.beans.tools.ContentProviderProducts";
+    static final String PROVIDER_NAME = "com.iteso.android_tarea6.tools.ContentProviderProducts";
     static final String URL = "content://" + PROVIDER_NAME + "/"+DataBaseHandler.TABLE_PRODUCT;
 
     static final int CATEGORY_ID=1;

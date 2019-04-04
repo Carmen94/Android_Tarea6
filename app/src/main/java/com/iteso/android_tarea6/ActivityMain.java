@@ -18,7 +18,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.iteso.android_tarea6.beans.ItemProduct;
-import com.iteso.android_tarea6.beans.tools.Constants;
+import com.iteso.android_tarea6.tools.Constants;
 
 public class ActivityMain extends AppCompatActivity {
 

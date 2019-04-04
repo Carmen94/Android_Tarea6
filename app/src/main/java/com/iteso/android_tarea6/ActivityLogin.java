@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.iteso.android_tarea6.beans.User;
-import com.iteso.android_tarea6.beans.tools.Constants;
+import com.iteso.android_tarea6.tools.Constants;
 
 public class ActivityLogin extends AppCompatActivity {
     Button loginButton;

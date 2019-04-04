@@ -11,7 +11,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 
 import com.iteso.android_tarea6.beans.ItemProduct;
-import com.iteso.android_tarea6.beans.tools.Constants;
+import com.iteso.android_tarea6.tools.Constants;
 import com.iteso.tarea5.R;
 
 

@@ -9,8 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.iteso.android_tarea6.beans.ItemProduct;
-import com.iteso.android_tarea6.beans.tools.ControlItemProduct;
-import com.iteso.android_tarea6.beans.tools.DataBaseHandler;
+import com.iteso.android_tarea6.tools.ControlItemProduct;
+import com.iteso.android_tarea6.tools.DataBaseHandler;
 
 import java.util.ArrayList;
 

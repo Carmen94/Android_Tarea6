@@ -1,4 +1,4 @@
-package com.iteso.android_tarea6.beans.tools;
+package com.iteso.android_tarea6.tools;
 
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;

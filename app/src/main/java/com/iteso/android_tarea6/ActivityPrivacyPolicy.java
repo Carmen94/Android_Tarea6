@@ -7,7 +7,7 @@ import android.view.KeyEvent;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import com.iteso.android_tarea6.beans.tools.WebAppInterface;
+import com.iteso.android_tarea6.tools.WebAppInterface;
 
 public class ActivityPrivacyPolicy extends AppCompatActivity implements DialogInterface.OnKeyListener{
     WebSettings webSettings;

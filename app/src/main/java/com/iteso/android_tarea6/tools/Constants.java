@@ -1,4 +1,4 @@
-package com.iteso.android_tarea6.beans.tools;
+package com.iteso.android_tarea6.tools;
 
 public class Constants {
 

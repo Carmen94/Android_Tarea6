@@ -13,11 +13,11 @@ import android.widget.Spinner;
 import com.iteso.android_tarea6.beans.Category;
 import com.iteso.android_tarea6.beans.ItemProduct;
 import com.iteso.android_tarea6.beans.Store;
-import com.iteso.android_tarea6.beans.tools.Constants;
-import com.iteso.android_tarea6.beans.tools.ControlCategory;
-import com.iteso.android_tarea6.beans.tools.ControlItemProduct;
-import com.iteso.android_tarea6.beans.tools.ControlStore;
-import com.iteso.android_tarea6.beans.tools.DataBaseHandler;
+import com.iteso.android_tarea6.tools.Constants;
+import com.iteso.android_tarea6.tools.ControlCategory;
+import com.iteso.android_tarea6.tools.ControlItemProduct;
+import com.iteso.android_tarea6.tools.ControlStore;
+import com.iteso.android_tarea6.tools.DataBaseHandler;
 
 
 import java.util.ArrayList;
