@@ -12,8 +12,6 @@ import android.widget.ImageView;
 
 import com.iteso.android_tarea6.beans.ItemProduct;
 import com.iteso.android_tarea6.tools.Constants;
-import com.iteso.tarea5.R;
-
 
 public class ActivityProduct extends AppCompatActivity {
 

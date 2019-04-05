@@ -71,6 +71,12 @@ public class ControlStore {
         return inserted;
     }
 
+    public long addStore(ContentValues contentValues, SQLiteDatabase database,DataBaseHandler databaseHandler) {
+        long inserted = 0;
+        inserted = database.insert(databaseHandler.TABLE_STORE, null, contentValues);
+        return inserted;
+    }
+
     public Store getStoreById(int idStore, DataBaseHandler databaseHandler){
         Store store = new Store();
         String selectQuery = "SELECT S." + databaseHandler.KEY_STORE_ID + ","

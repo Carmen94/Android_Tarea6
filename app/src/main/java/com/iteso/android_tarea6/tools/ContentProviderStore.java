@@ -10,23 +10,20 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteQueryBuilder;
 import android.net.Uri;
 
-import java.util.HashMap;
-
-public class ContentProviderProducts extends ContentProvider {
+public class ContentProviderStore extends ContentProvider {
     DataBaseHandler dataBaseHandler;
 
-    static final String categoryId = DataBaseHandler.KEY_PRODUCT_CATEGORY;
-    private static final String AUTHORITY = "com.iteso.android_tarea6.tools.product";
-    private static final String BASE_PATH ="product";
+    private static final String AUTHORITY = "com.iteso.android_tarea6.tools.store";
+    private static final String BASE_PATH ="store";
 
-    static final int CATEGORIES=1;
-    static final int CATEGORY_ID=2;
+    static final int STORES=1;
+    static final int STORE_ID=2;
     private SQLiteDatabase database;
 
     private static final UriMatcher uriMatcher = new UriMatcher(UriMatcher.NO_MATCH);
     static {
-        uriMatcher.addURI(AUTHORITY, BASE_PATH, CATEGORIES);
-        uriMatcher.addURI(AUTHORITY, BASE_PATH+"/#", CATEGORY_ID);
+        uriMatcher.addURI(AUTHORITY, BASE_PATH, STORES);
+        uriMatcher.addURI(AUTHORITY, BASE_PATH+"/#", STORE_ID);
     }
 
     public boolean onCreate() {
@@ -39,36 +36,47 @@ public class ContentProviderProducts extends ContentProvider {
     public Cursor query(Uri uri, String[] projection, String selection, String[] selectionArgs, String sortOrder) {
         database = dataBaseHandler.getWritableDatabase();
         SQLiteQueryBuilder queryBuilder = new SQLiteQueryBuilder();
-        queryBuilder.setTables(dataBaseHandler.TABLE_PRODUCT);
-
+        queryBuilder.setTables(dataBaseHandler.TABLE_STORE);
+        Cursor cursor=null;
         switch (uriMatcher.match(uri)) {
-            case CATEGORIES:
+            case STORES:
+                cursor = queryBuilder.query(database, null, null, selectionArgs, null, null, sortOrder);
                 break;
-            case CATEGORY_ID:
-                queryBuilder.appendWhere(DataBaseHandler.KEY_CATEGORY_ID + "="+ uri.getLastPathSegment());
+            case STORE_ID:
+                cursor = queryBuilder.query(database, projection, selection, selectionArgs, null, null, sortOrder);
                 break;
             default:
         }
         if (sortOrder == null || sortOrder == ""){
             sortOrder = DataBaseHandler.KEY_PRODUCT_TITLE;
         }
-        Cursor cursor=queryBuilder.query(database, projection, selection, selectionArgs, null, null, sortOrder);
         cursor.setNotificationUri(getContext().getContentResolver(), uri);
         return cursor;
     }
 
     public Uri insert(Uri uri, ContentValues values) {
-
-
-        return Uri.parse("Holaa");
+        database=dataBaseHandler.getWritableDatabase();
+        long inserted ;
+        inserted = database.insert(dataBaseHandler.TABLE_STORE, null, values);
+        ControlStore controlStore = new ControlStore();
+//        id = controlStore.addStore(values,database,dataBaseHandler);
+        switch (uriMatcher.match(uri)) {
+            case STORES:
+                inserted = controlStore.addStore(values,database,dataBaseHandler);
+                break;
+            default:
+                throw new IllegalArgumentException("Unknown URI: " + uri);
+        }
+        getContext().getContentResolver().notifyChange(uri, null);
+        return Uri.parse(dataBaseHandler.TABLE_STORE + "/" + inserted);
     }
     @Override
     public String getType(Uri uri) {
         switch (uriMatcher.match(uri)){
-            case CATEGORIES:
-                return "vnd.android.cursor.dir/vnd.com.iteso.android_tarea6.tools.product";
-            case CATEGORY_ID:
-                return "vnd.android.cursor.item/vnd.com.iteso.android_tarea6.tools.product";
+            case STORES:
+                return "vnd.android.cursor.dir/vnd.iteso.android_tarea6.tools.store";
+            case STORE_ID:
+                return "vnd.android.cursor.item/vnd.iteso.android_tarea6.tools.store";
             default:
                 throw new IllegalArgumentException("Unsupported URI: " + uri);        }
     }
@@ -80,7 +88,7 @@ public class ContentProviderProducts extends ContentProvider {
 
     @Override
     public int update(Uri uri, ContentValues values, String selection,String[] selectionArgs) {
-       return 0;
+        return 0;
     }
 
 }

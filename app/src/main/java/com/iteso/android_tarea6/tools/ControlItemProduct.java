@@ -84,4 +84,24 @@ public class ControlItemProduct {
         cursor = null;
         return itemsByCategory;
     }
+
+    String getQuery(int idCategory){
+        String selectQuery = "SELECT "
+                +"P." + DataBaseHandler.KEY_PRODUCT_ID + ","
+                +"P." + DataBaseHandler.KEY_PRODUCT_TITLE+","
+                +"P." + DataBaseHandler.KEY_PRODUCT_CATEGORY+","
+                +"P." + DataBaseHandler.KEY_PRODUCT_DESCRIPTION+","
+//                +"P." + databaseHandler.KEY_PRODUCT_IMAGE +""
+                +"P." + DataBaseHandler.KEY_PRODUCT_IMAGE +","
+//                +"SP." + databaseHandler.KEY_STORE_PRODUCT_P_ID+","
+                +"SP." + DataBaseHandler.KEY_STORE_PRODUCT_S_ID
+                +" FROM "
+                + DataBaseHandler.TABLE_PRODUCT + " P, "
+//                + databaseHandler.TABLE_PRODUCT + " P "
+                + DataBaseHandler.TABLE_STORE_PRODUCT + " SP "
+                +" WHERE "
+                +"P."+DataBaseHandler.KEY_PRODUCT_CATEGORY + "=" + idCategory
+                +" AND SP." + DataBaseHandler.KEY_STORE_PRODUCT_P_ID+" = P."+DataBaseHandler.KEY_PRODUCT_ID;
+        return selectQuery;
+    }
 }

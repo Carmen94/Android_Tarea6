@@ -4,6 +4,8 @@
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <permission android:name="com.iteso.android_tarea6.tools.READ_DATABASE" android:protectionLevel="normal" />
+    <permission android:name="com.iteso.android_tarea6.tools.WRITE_DATABASE" android:protectionLevel="normal" />
 
     <application
         android:allowBackup="true"
@@ -30,6 +32,18 @@
             android:name="com.iteso.android_tarea6.ActivityMain"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" />
+        <provider android:name=".tools.ContentProviderProducts"
+            android:exported="true"
+            android:authorities="com.iteso.android_tarea6.tools.product"
+            android:readPermission="com.iteso.android_tarea6.tools.READ_DATABASE"
+            android:writePermission="com.iteso.android_tarea6.tools.WRITE_DATABASE"
+            />
+        <provider android:name=".tools.ContentProviderStore"
+            android:exported="true"
+            android:authorities="com.iteso.android_tarea6.tools.store"
+            android:readPermission="com.iteso.android_tarea6.tools.READ_DATABASE"
+            android:writePermission="com.iteso.android_tarea6.tools.WRITE_DATABASE"
+            />
     </application>
 
 </manifest>
