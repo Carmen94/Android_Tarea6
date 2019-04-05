@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "978172098073",
+    "firebase_url": "https://tarea5-5a8a8.firebaseio.com",
+    "project_id": "tarea5-5a8a8",
+    "storage_bucket": "tarea5-5a8a8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:978172098073:android:152404b014c01c78",
+        "android_client_info": {
+          "package_name": "com.iteso.tarea3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "978172098073-158qafgta7p4cc8morplmkps3cq46tgp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.iteso.tarea3",
+            "certificate_hash": "4f80add9845f73f0e1b482a2fc9bf89b56d9e958"
+          }
+        },
+        {
+          "client_id": "978172098073-lejlh3s42jt1nks55p3msto217gpvpdv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZ7Sw2V--zjk0_1zyqe194Vgzq1_shyQI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "978172098073-lejlh3s42jt1nks55p3msto217gpvpdv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
