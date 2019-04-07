@@ -52,6 +52,7 @@ public class ActivityMain extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(v.getContext(), ActivityItem.class);
                 startActivityForResult(intent, Constants.INTENT_PRODUCTS_NOTIFY);
+                finish();
             }
         });
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);

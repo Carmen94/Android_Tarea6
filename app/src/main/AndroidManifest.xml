@@ -44,6 +44,12 @@
             android:readPermission="com.iteso.android_tarea6.tools.READ_DATABASE"
             android:writePermission="com.iteso.android_tarea6.tools.WRITE_DATABASE"
             />
+        <provider android:name=".tools.ContentProviderCategory"
+            android:exported="true"
+            android:authorities="com.iteso.android_tarea6.tools.category"
+            android:readPermission="com.iteso.android_tarea6.tools.READ_DATABASE"
+            android:writePermission="com.iteso.android_tarea6.tools.WRITE_DATABASE"
+            />
     </application>
 
 </manifest>

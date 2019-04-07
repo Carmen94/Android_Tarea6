@@ -9,14 +9,12 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteQueryBuilder;
 import android.net.Uri;
 
-import java.util.HashMap;
-
-public class ContentProviderProducts extends ContentProvider {
+public class ContentProviderCategory extends ContentProvider {
     DataBaseHandler dataBaseHandler;
 
     static final String categoryId = DataBaseHandler.KEY_PRODUCT_CATEGORY;
     private static final String AUTHORITY = "com.iteso.android_tarea6.tools.product";
-    private static final String BASE_PATH ="product";
+    private static final String BASE_PATH ="category";
 
     static final int CATEGORIES=1;
     static final int CATEGORY_ID=2;
@@ -38,7 +36,7 @@ public class ContentProviderProducts extends ContentProvider {
     public Cursor query(Uri uri, String[] projection, String selection, String[] selectionArgs, String sortOrder) {
         database = dataBaseHandler.getWritableDatabase();
         SQLiteQueryBuilder queryBuilder = new SQLiteQueryBuilder();
-        queryBuilder.setTables(dataBaseHandler.TABLE_PRODUCT);
+        queryBuilder.setTables(dataBaseHandler.TABLE_CATEGORY);
 
         switch (uriMatcher.match(uri)) {
             case CATEGORIES:
@@ -49,7 +47,7 @@ public class ContentProviderProducts extends ContentProvider {
             default:
         }
         if (sortOrder == null || sortOrder == ""){
-            sortOrder = DataBaseHandler.KEY_PRODUCT_TITLE;
+            sortOrder = DataBaseHandler.KEY_CATEGORY_NAME;
         }
         Cursor cursor=queryBuilder.query(database, projection, selection, selectionArgs, null, null, sortOrder);
         cursor.setNotificationUri(getContext().getContentResolver(), uri);
@@ -59,7 +57,7 @@ public class ContentProviderProducts extends ContentProvider {
     public Uri insert(Uri uri, ContentValues values) {
 
 
-        return Uri.parse("Not implemented function");
+        return Uri.parse("Not implemented");
     }
     @Override
     public String getType(Uri uri) {

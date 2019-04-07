@@ -1,7 +1,6 @@
 package com.iteso.android_tarea6.tools;
 
 import android.content.ContentProvider;
-import android.content.ContentUris;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.UriMatcher;
@@ -57,9 +56,7 @@ public class ContentProviderStore extends ContentProvider {
     public Uri insert(Uri uri, ContentValues values) {
         database=dataBaseHandler.getWritableDatabase();
         long inserted ;
-        inserted = database.insert(dataBaseHandler.TABLE_STORE, null, values);
         ControlStore controlStore = new ControlStore();
-//        id = controlStore.addStore(values,database,dataBaseHandler);
         switch (uriMatcher.match(uri)) {
             case STORES:
                 inserted = controlStore.addStore(values,database,dataBaseHandler);
